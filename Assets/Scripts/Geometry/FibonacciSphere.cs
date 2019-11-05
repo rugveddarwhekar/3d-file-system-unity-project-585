@@ -21,6 +21,7 @@ public class FibonacciSphere : MonoBehaviour
     void FibonacciSphereDraw()
     {
         //int samples = 10;
+
         float rnd = 1;
         bool randomize = true;
 
