@@ -12,6 +12,8 @@ public class MyFileSystem : MonoBehaviour
 {
     public Text txtSelectedNode;
     public Text txtHoveredOverNode;
+    public Transform target;
+
 
     DataNode currentSelectedNode;
 
@@ -96,6 +98,15 @@ public class MyFileSystem : MonoBehaviour
                         // update line renderer component
                         hitInfo.transform.GetComponent<LineRenderer>().SetPosition(1, dn.gameObject.transform.position);
 
+                        if (Vector3.Distance(hitInfo.transform.position, transform.position) > 3f)
+                        {
+
+                            if (samples > 10)
+                            {
+                                transform.position = (hitInfo.transform.position + (new Vector3(0.0f, 0.0f, 1.5f)));
+                            }
+                        }
+                        transform.LookAt(hitInfo.transform);
 
                         diTop = null;
                     }

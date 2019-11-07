@@ -65,6 +65,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Camera\CameraControl.cs" />
     <Compile Include="Assets\Scripts\Camera\FaceCamera.cs" />
+    <Compile Include="Assets\Scripts\Camera\LookAtTarget.cs" />
+    <Compile Include="Assets\Scripts\Camera\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\Data\DataNode.cs" />
     <Compile Include="Assets\Scripts\Geometry\FibonacciSphere.cs" />
     <Compile Include="Assets\Scripts\LineRendererSample.cs" />
