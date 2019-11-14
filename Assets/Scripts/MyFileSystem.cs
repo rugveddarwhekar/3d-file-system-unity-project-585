@@ -74,6 +74,7 @@ public class MyFileSystem : MonoBehaviour
         }
         #endregion
 
+        //i add this comment for trial....
         // Check to see if the Left Mouse Button was clicked
         if (Input.GetMouseButtonDown(0))
         {
