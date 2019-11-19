@@ -16,6 +16,7 @@ public class MyFileSystem : MonoBehaviour
 
 
     DataNode currentSelectedNode;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -23,35 +24,51 @@ public class MyFileSystem : MonoBehaviour
         txtSelectedNode.text = "";
         txtHoveredOverNode.text = "";
 
-        float index = 0;
+        float x_Start = 0, y_start = 0;
+        int columnlength = 2, rowlength = 3;
+        float x_space = 2, y_space = 2;
+        int numberOfDrives = 0;
+        //float index_x = 0;
+        List<DriveInfo> detail_drive = new List<DriveInfo>();
         foreach (var drive in DriveInfo.GetDrives())
         {
-            Debug.Log($"Drive: {drive.Name} Root: { drive.RootDirectory}");
-
-            // Create a primitive type cube game object
-            var gObj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-
-            // Calculate the position of the game object in the world space
-            int x = 0;
-            float y = index + 1f;
-            int z = 0;
-
-            // Position the game object in world space
-            gObj.transform.position = new Vector3(x, y, z);
-            gObj.name = drive.Name;
-
-            // Add DataNode component and update the attributes for later usage
-            gObj.AddComponent<DataNode>();
-            DataNode dn = gObj.GetComponent<DataNode>();
-            dn.Name = drive.Name;
-            dn.Size = drive.TotalSize;
-            dn.FullName = drive.RootDirectory.FullName;
-            dn.IsDrive = true;
-
-            index += 3f;
+            detail_drive.Add(drive);
+            numberOfDrives++;
         }
-    }
+            //float index_y = 0;
+            //float x = 0;
+            //float y = 0;
+            for (int i = 0, j = 0; j < numberOfDrives; i++, j++)
+            {
+                Debug.Log($"Drive: {detail_drive[j].Name} Root: { detail_drive[j].RootDirectory}");
 
+                // Create a primitive type cube game object
+                var gObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
+
+
+                // Calculate the position of the game object in the world space
+
+                //x = index_x + 1f;
+                //y = index_y + 1f;
+                int z = 0;
+
+                // Position the game object in world space
+                //gObj.transform.position = new Vector3(x, y, z);
+                gObj.transform.position = new Vector3(x_Start + (x_space * (i % columnlength)), y_start + (y_space * (i / columnlength)), z);
+
+                // Add DataNode component and update the attributes for later usage
+                gObj.AddComponent<DataNode>();
+                DataNode dn = gObj.GetComponent<DataNode>();
+                dn.Name = detail_drive[j].Name;
+                dn.Size = detail_drive[j].TotalSize;
+                dn.FullName = detail_drive[j].RootDirectory.FullName;
+                dn.IsDrive = true;
+
+                //index_y += 3f;
+            }
+            //index_x += 3f;
+        }
+    
     RaycastHit hitInfo = new RaycastHit();
     
     void Update()
@@ -98,13 +115,15 @@ public class MyFileSystem : MonoBehaviour
 
                         // update line renderer component
                         hitInfo.transform.GetComponent<LineRenderer>().SetPosition(1, dn.gameObject.transform.position);
-
+                        //WaitForSeconds wait = new WaitForSeconds(1f);
                         if (Vector3.Distance(hitInfo.transform.position, transform.position) > 3f)
                         {
 
-                            if (samples > 10)
+                            if (samples > 1)
                             {
-                                transform.position = (hitInfo.transform.position + (new Vector3(0.0f, 0.0f, 1.5f)));
+                                //Generate();
+                               // yield return wait;
+                               transform.position = (hitInfo.transform.position + (new Vector3(0.0f, 0.0f, 0.0f)));
                             }
                         }
                         transform.LookAt(hitInfo.transform);

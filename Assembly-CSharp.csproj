@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\LineRendererSample.cs" />
     <Compile Include="Assets\Scripts\MyFileSystem.cs" />
     <Compile Include="Assets\Scripts\TestSample.cs" />
+    <Compile Include="Assets\Scripts\trialScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/rugved/unity_projects/MyFirstUnityProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

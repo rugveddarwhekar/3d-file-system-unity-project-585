@@ -41,7 +41,7 @@ public class FibonacciSphere : MonoBehaviour
             float x = Mathf.Cos(phi) * r;
             float z = Mathf.Sin(phi) * r;
 
-            var gObj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            var gObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
             gObj.transform.position = new Vector3(x + transform.position.x, y + transform.position.y, z + transform.position.z);
             gObj.transform.localScale *= 0.1f;
 

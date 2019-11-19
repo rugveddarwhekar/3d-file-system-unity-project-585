@@ -1,10 +1,15 @@
 ﻿<Properties StartupConfiguration="{AF04FCAC-BCF5-20C8-284C-FC5BE820D722}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MyFileSystem.cs">
     <Files>
-      <File FileName="Assets/Scripts/Geometry/FibonacciSphere.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/Data/DataNode.cs" />
-      <File FileName="Assets/Scripts/Camera/LookAtTarget.cs" />
-      <File FileName="Assets/Scripts/MyFileSystem.cs" Line="68" Column="60" />
+      <File FileName="Assets/Scripts/Geometry/FibonacciSphere.cs" Line="38" Column="1" />
+      <File FileName="Assets/Scripts/Data/DataNode.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Camera/LookAtTarget.cs" Line="19" Column="67" />
+      <File FileName="Assets/Scripts/MyFileSystem.cs" Line="65" Column="35" />
+      <File FileName="Assets/Scripts/trialScript.cs" Line="108" Column="2" />
+      <File FileName="Assets/Scripts/trialScript.cs" Line="108" Column="2" />
+      <File FileName="Assets/Scripts/LineRendererSample.cs" Line="15" Column="6" />
+      <File FileName="Assets/Scripts/Camera/NewBehaviourScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Camera/CameraControl.cs" Line="63" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +19,6 @@
               <Node name="Scripts" expanded="True">
                 <Node name="Camera" expanded="True" />
                 <Node name="Data" expanded="True" />
-                <Node name="Geometry" expanded="True" />
                 <Node name="MyFileSystem.cs" selected="True" />
               </Node>
             </Node>
@@ -25,7 +29,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="15a81ea7-1149-458d-88d4-18debda03ae0" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="799a400a-1ba5-44b9-acc7-394d6a818751" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
