@@ -131,3 +131,31 @@ public class MyFileSystem : MonoBehaviour
         }
     }
 }
+
+
+
+
+
+/* public class GridManager : Monobehaviour
+ {public float x_Start, y_start;
+ public int columnlength, rowlength;
+ public float x_space, y_space;
+ public GameObject prefab;
+
+
+    void start() {
+    for (int i =0; i< columnlength *rowlength ;i++){
+    instantiate (prefab, new vector3(x_Start * (i % columnlength)), y_start +(y_space * (i/ columnlength))),Quaternion.identity);
+        }
+    }
+
+    void update (){
+    }
+
+
+    }
+ }
+     
+     
+     
+     */

@@ -28,18 +28,11 @@ public class FibonacciSphere : MonoBehaviour
         if (randomize)
             rnd = Random.value * samples;
 
-        float offset = 2.0f / samples;
-        float increment = Mathf.PI * (3.0f - Mathf.Sqrt(5.0f));
+       
 
         for (int i = 0; i < samples; i++)
         {
-            float y = ((i * offset) - 1) + (offset / 2);
-            float r = Mathf.Sqrt(1 - Mathf.Pow(y, 2));
-
-            float phi = ((i + rnd) % samples) * increment;
-
-            float x = Mathf.Cos(phi) * r;
-            float z = Mathf.Sin(phi) * r;
+            
 
             var gObj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             gObj.transform.position = new Vector3(x + transform.position.x, y + transform.position.y, z + transform.position.z);
