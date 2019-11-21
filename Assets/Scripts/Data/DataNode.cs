@@ -85,12 +85,13 @@ public class DataNode : MonoBehaviour
 
                         gObj.transform.SetParent(transform);
                         gObj.name = fi.FullName;
+                       
                         gObj.transform.LookAt(transform);
 
                         gObj.AddComponent<DataNode>();
                         DataNode dn = gObj.GetComponent<DataNode>();
-                        dn.Name = fi.Name;
-                        dn.Size = -1;
+                        dn.Name = fi.Name;  
+                        dn.Size = -12;
                         dn.FullName = fi.FullName;
                         dn.IsFolder = false;
 
@@ -218,7 +219,7 @@ public class DataNode : MonoBehaviour
                 gObj.AddComponent<DataNode>();
                 DataNode dn = gObj.GetComponent<DataNode>();
                 dn.Name = fi.Name;
-                dn.Size = -1;
+                dn.Size = -11;
                 dn.FullName = fi.FullName;
                 dn.IsFolder = false;
 

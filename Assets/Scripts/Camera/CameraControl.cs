@@ -23,6 +23,14 @@ public class CameraControl : MonoBehaviour
     }
 
     private float speed = 2.0f;
+    
+    public void changeCameraPosition()
+    {
+        //
+        transform.Rotate(Vector3.left, 0.45f);
+
+    }
+    
     void Update()
     {
         //if (Input.GetMouseButton(0))
